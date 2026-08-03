@@ -1,130 +1,254 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Juntos Contra o Machismo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background: #8e44ad;
-      color: white;
-      padding: 20px;
-    }
-    img {
-      margin: 20px auto;
-      max-width: 600px;
-      border-radius: 10px;
-    }
-    section {
-      margin: 30px auto;
-      width: 80%;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    button {
-      background: #8e44ad;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    button:hover {
-      background: #732d91;
-    }
-    .motivacional {
-      font-style: italic;
-      color: #444;
-      margin: 10px 0;
-    }
-    footer {
-      background: #8e44ad;
-      color: white;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscientização e Apoio: Contra o Machismo</title>
+    <style>
+        /* Estilização Geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #6c5ce7;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Imagem de Destaque */
+        .hero-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Seções */
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #6c5ce7;
+        }
+
+        /* Formulário Simulado */
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #5b4bc4;
+        }
+
+        #mensagem-acolhimento {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f8f5;
+            border-left: 5px solid #2ecc71;
+            display: none;
+        }
+
+        /* Quiz */
+        .quiz-option {
+            display: block;
+            margin: 8px 0;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .quiz-option:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Frases Motivacionais */
+        .frases {
+            font-style: italic;
+            border-left: 4px solid #6c5ce7;
+            padding-left: 15px;
+        }
+
+        /* Fontes */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d3436;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #a29bfe;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Juntos Contra o Machismo</h1>
-</header>
+    <header>
+        <h1>Conscientização e Respeito: Juntos Contra o Machismo</h1>
+    </header>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Stop_violence_against_women.jpg" alt="Respeito e igualdade">
+    <div class="container">
+        
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Grupo de pessoas unidas em apoio mútuo">
+        </div>
 
-<section>
-  <h2>Mensagem de Acolhimento</h2>
-  <p>Você não está sozinha. Este espaço é para acolher, ouvir e apoiar. O machismo não define quem você é, e juntos podemos construir um futuro de respeito e igualdade.</p>
-</section>
+        <section>
+            <h2>Você Não Está Sozinha(o)</h2>
+            <p>Este é um espaço seguro de reflexão e aprendizado. O machismo afeta a todos nós e construir um ambiente escolar mais justo, respeitoso e igualitário é um dever coletivo. Seja para buscar apoio ou para aprender mais, seja muito bem-vinda(o)!</p>
+        </section>
 
-<section>
-  <h2>Desabafo (Simulação)</h2>
-  <form id="desabafoForm">
-    <textarea id="desabafo" rows="5" cols="50" placeholder="Escreva aqui seu desabafo..."></textarea><br>
-    <button type="button" onclick="mensagemAcolhimento()">Enviar</button>
-  </form>
-  <p id="resposta"></p>
-</section>
+        <section>
+            <h2>Espaço de Escuta (Simulação)</h2>
+            <p>Precisa colocar algo para fora? Escreva no campo abaixo. <strong>Importante:</strong> Este formulário é apenas uma simulação interativa. Nenhum dado ou texto digitado será salvo ou enviado para nenhum lugar.</p>
+            
+            <form id="form-desabafo">
+                <textarea placeholder="Escreva seu desabafo aqui..."></textarea><br>
+                <button type="button" onclick="enviarDesabafo()">Enviar Desabafo</button>
+            </form>
 
-<section>
-  <h2>Frases Motivacionais</h2>
-  <p class="motivacional">"Respeito é liberdade."</p>
-  <p class="motivacional">"Você é forte."</p>
-  <p class="motivacional">"A igualdade é possível."</p>
-</section>
+            <div id="mensagem-acolhimento">
+                <strong>Sua voz importa!</strong> Obrigado por compartilhar. Lembre-se de que você é forte e que existem pessoas dispostas a ouvir e ajudar você no mundo real.
+            </div>
+        </section>
 
-<section>
-  <h2>Orientações de Ajuda</h2>
-  <p>Se sentir necessidade, procure:</p>
-  <ul style="text-align:left; display:inline-block;">
-    <li>Professor ou pedagogo da escola</li>
-    <li>Direção escolar</li>
-    <li>Familiares</li>
-    <li>Outro adulto de confiança</li>
-  </ul>
-  <p>📞 Central de Atendimento à Mulher: <strong>180</strong></p>
-</section>
+        <section>
+            <h2>Quiz: Teste seus conhecimentos</h2>
+            <div id="quiz-container">
+                </div>
+            <button id="btn-quiz" onclick="proximaPergunta()">Iniciar Quiz</button>
+            <div id="resultado-quiz" style="margin-top: 15px; font-weight: bold;"></div>
+        </section>
 
-<section>
-  <h2>Quiz Interativo</h2>
-  <div id="quiz"></div>
-  <button onclick="corrigirQuiz()">Ver Resultado</button>
-  <p id="resultado"></p>
-</section>
+        <section>
+            <h2>Para Inspirar</h2>
+            <div class="frases">
+                <p>"A igualdade de gênero não é apenas um problema das mulheres, é uma questão de direitos humanos que afeta a todos nós."</p>
+                <p>"Nunca limite a si mesma por causa da imaginação limitada dos outros."</p>
+                <p>"Respeito e empatia são a base para qualquer transformação social."</p>
+            </div>
+        </section>
 
-<footer>
-  <h3>Fontes Utilizadas</h3>
-  <p>
-    - Ministério das Mulheres: Pacto Nacional de Prevenção aos Feminicídios<br>
-    - Governo Federal: Cartilhas sobre Igualdade e Violência contra Mulheres<br>
-    - Anatel: Protocolo de Enfrentamento à Violência Política contra as Mulheres
-  </p>
-</footer>
+        <section>
+            <h2>Onde Buscar Ajuda?</h2>
+            <p>Se você está passando por uma situação difícil, sofrendo discriminação ou precisa de orientação, não guarde isso para você. Procure ajuda no seu dia a dia:</p>
+            <ul>
+                <li><strong>Na Escola:</strong> Procure um professor de confiança, a equipe pedagógica ou a direção da escola. Eles estão preparados para orientar e acolher.</li>
+                <li><strong>Em Casa:</strong> Converse com seus pais, responsáveis ou outro adulto da família em quem você confie.</li>
+                <li><strong>Canais Públicos de Apoio:</strong>
+                    <ul>
+                        <li><strong>Ligue 180:</strong> Central de Atendimento à Mulher (Serviço gratuito e confidencial).</li>
+                        <li><strong>Ligue 100:</strong> Disque Direitos Humanos.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-<script>
-function mensagemAcolhimento() {
-  document.getElementById("resposta").innerHTML =
-    "Obrigado por compartilhar. Sua voz importa e você merece respeito!";
-}
+        <section>
+            <h2>Fontes de Pesquisa</h2>
+            <p>Todo o conteúdo deste site foi baseado em informações e dados oficiais das seguintes fontes confiáveis:</p>
+            <ul>
+                <li><a href="https://www.gov.br/mulheres/pt-br" target="_blank" rel="noopener">Ministério das Mulheres (Governo Federal)</a></li>
+                <li><a href="https://www.gov.br/mdh/pt-br" target="_blank" rel="noopener">Ministério dos Direitos Humanos e da Cidadania</a></li>
+                <li><a href="https://www.unicef.org/brazil/" target="_blank" rel="noopener">UNICEF Brasil - Direitos da Criança e do Adolescente</a></li>
+                <li><a href="https://www.onumulheres.org.br/" target="_blank" rel="noopener">ONU Mulheres Brasil</a></li>
+            </ul>
+        </section>
 
-const perguntas = [
-  {q:"O que é machismo?", a:["Respeito às mulheres","Discriminação baseada no gênero","Igualdade de direitos"], c:1},
-  {q:"Qual órgão atende pelo número 180?", a:["Polícia Militar","Central de Atendimento à Mulher","SAMU"], c:1},
-  {q:"O que significa igualdade de gênero?", a:["Homens e mulheres com direitos iguais","Homens superiores às mulheres","Mulheres não participam da política"], c:0},
-  {q:"O feminicídio é:", a:["Crime contra homens","Assassinato de mulheres por razão de gênero","Discussão familiar"], c:1},
-  {q:"Quem procurar na escola em caso de violência?", a:["Professor ou pedagogo","Colegas","Ninguém"], c:0}
-];
+    </div>
 
-function carregarQuiz() {
-  let quizHTML = "";
-  perguntas
+    <footer>
+        <p>Projeto Escolar do Ensino Médio — Hospedado via GitHub Pages</p>
+    </footer>
+
+    <script>
+        // Função para o Formulário Simulado
+        function enviarDesabafo() {
+            const caixaTexto = document.querySelector('textarea');
+            if (caixaTexto.value.trim() === "") {
+                alert("Por favor, digite algo antes de enviar.");
+                return;
+            }
+            // Exibe a mensagem de acolhimento
+            document.getElementById('mensagem-acolhimento').style.display = 'block';
+            // Limpa o campo de texto sem salvar nada
+            caixaTexto.value = "";
+        }
+
+        // Dados do Quiz (5 Perguntas)
+        const perguntas = [
+            {
+                pergunta: "1. O que caracteriza o machismo?",
+                opcoes: ["A crença na igualdade entre todos", "A ideia de que os homens são superiores às mulheres", "A valorização das diferenças sem preconceito"],
+                correta: 1
+            },
+            {
+                pergunta: "2. Qual destes canais públicos é focado no atendimento à mulher no Brasil?",
+                opcoes: ["Ligue 190", "Ligue 180", "Ligue 192"],
+                correta: 1
+            },
+            {
+                pergunta: "3. O machismo afeta apenas as mulheres?",
+                opcoes: ["Sim, afeta exclusivamente as mulheres", "Não, ele também impõe padrões nocivos aos homens", "Não afeta ninguém na sociedade atual"],
+                correta: 1
+            },
+            {
+                pergunta: "4. A divisão justa de tarefas domésticas entre homens e mulheres é um exemplo de:",
+                opcoes: ["Igualdade de gênero", "Machismo estrutural", "Privilégio masculino"],
+                correta: 0
+            },
+            {
+                pergunta: "5. Se você presenciar ou sofrer uma situação de desrespeito na escola, o que deve fazer?",
+                opcoes: ["Guardar para si", "Procurar um adulto de confiança, como professor ou pedagogo", "Ignorar a situação"],
+                correta: 1
+            }
+        ];
+
+        let perguntaAtual = 0;
+        let pontuacao = 0;
+
+        function carregarPergunta() {
+            const container = document.getElementById('quiz-container');
+            const q = perguntas[perguntaAtual];
