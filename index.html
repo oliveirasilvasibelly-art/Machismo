@@ -1,171 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Machismo: Informação, Respeito e Acolhimento</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <title>Juntos Contra o Machismo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #8e44ad;
+      color: white;
+      padding: 20px;
+    }
+    img {
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+    section {
+      margin: 30px auto;
+      width: 80%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #8e44ad;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #732d91;
+    }
+    .motivacional {
+      font-style: italic;
+      color: #444;
+      margin: 10px 0;
+    }
+    footer {
+      background: #8e44ad;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-<h1>Machismo: Informação, Respeito e Acolhimento</h1>
+  <h1>Juntos Contra o Machismo</h1>
 </header>
 
-<section class="banner">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Stop_violence_against_women.jpg" alt="Respeito e igualdade">
 
-<img src="imagem.jpg" alt="Respeito e igualdade">
-
-</section>
-
-<section class="texto">
-
-<h2>Você não está sozinho(a).</h2>
-
-<p>
-Este espaço foi criado com o objetivo de informar, acolher e incentivar o respeito entre todas as pessoas.
-O machismo pode causar sofrimento e prejudicar a convivência. Conversar com alguém de confiança é um passo importante.
-</p>
-
-</section>
-
-<section class="formulario">
-
-<h2>Espaço de Desabafo (Simulação)</h2>
-
-<form id="formulario">
-
-<label>Nome (opcional)</label>
-
-<input type="text">
-
-<label>Seu desabafo:</label>
-
-<textarea id="desabafo" required></textarea>
-
-<button type="submit">Enviar</button>
-
-</form>
-
-<p id="mensagem"></p>
-
+<section>
+  <h2>Mensagem de Acolhimento</h2>
+  <p>Você não está sozinha. Este espaço é para acolher, ouvir e apoiar. O machismo não define quem você é, e juntos podemos construir um futuro de respeito e igualdade.</p>
 </section>
 
 <section>
-
-<h2>Frases Motivacionais</h2>
-
-<ul>
-
-<li>🌸 O respeito transforma relações.</li>
-
-<li>🌸 Sua voz merece ser ouvida.</li>
-
-<li>🌸 Pedir ajuda é um ato de coragem.</li>
-
-<li>🌸 Você merece viver com dignidade e respeito.</li>
-
-<li>🌸 A igualdade beneficia toda a sociedade.</li>
-
-</ul>
-
+  <h2>Desabafo (Simulação)</h2>
+  <form id="desabafoForm">
+    <textarea id="desabafo" rows="5" cols="50" placeholder="Escreva aqui seu desabafo..."></textarea><br>
+    <button type="button" onclick="mensagemAcolhimento()">Enviar</button>
+  </form>
+  <p id="resposta"></p>
 </section>
 
 <section>
-
-<h2>Quiz Interativo</h2>
-
-<form id="quiz">
-
-<p>1. O machismo é:</p>
-
-<input type="radio" name="q1" value="c">Uma forma de preconceito<br>
-
-<input type="radio" name="q1" value="e">Uma brincadeira comum<br><br>
-
-<p>2. Se alguém sofrer discriminação, o correto é:</p>
-
-<input type="radio" name="q2" value="c">Oferecer apoio e procurar ajuda<br>
-
-<input type="radio" name="q2" value="e">Ignorar a situação<br><br>
-
-<p>3. Homens e mulheres devem ter:</p>
-
-<input type="radio" name="q3" value="c">Os mesmos direitos<br>
-
-<input type="radio" name="q3" value="e">Direitos diferentes<br><br>
-
-<p>4. Na escola, em caso de violência ou discriminação, você pode procurar:</p>
-
-<input type="radio" name="q4" value="c">Professor, direção ou pedagogo<br>
-
-<input type="radio" name="q4" value="e">Ninguém<br><br>
-
-<p>5. Respeitar as diferenças contribui para:</p>
-
-<input type="radio" name="q5" value="c">Uma convivência melhor<br>
-
-<input type="radio" name="q5" value="e">Mais conflitos<br><br>
-
-<button type="button" onclick="corrigirQuiz()">Ver Resultado</button>
-
-</form>
-
-<h3 id="resultado"></h3>
-
+  <h2>Frases Motivacionais</h2>
+  <p class="motivacional">"Respeito é liberdade."</p>
+  <p class="motivacional">"Você é forte."</p>
+  <p class="motivacional">"A igualdade é possível."</p>
 </section>
 
 <section>
-
-<h2>Onde procurar ajuda?</h2>
-
-<p>
-Caso você esteja passando por uma situação difícil, converse com:
-</p>
-
-<ul>
-
-<li>Professor(a)</li>
-
-<li>Pedagogo(a)</li>
-
-<li>Direção da escola</li>
-
-<li>Familiares</li>
-
-<li>Outro adulto de confiança</li>
-
-</ul>
-
-<p>
-Pedir ajuda é importante e pode fazer diferença.
-</p>
-
+  <h2>Orientações de Ajuda</h2>
+  <p>Se sentir necessidade, procure:</p>
+  <ul style="text-align:left; display:inline-block;">
+    <li>Professor ou pedagogo da escola</li>
+    <li>Direção escolar</li>
+    <li>Familiares</li>
+    <li>Outro adulto de confiança</li>
+  </ul>
+  <p>📞 Central de Atendimento à Mulher: <strong>180</strong></p>
 </section>
 
 <section>
-
-<h2>Fontes da Pesquisa</h2>
-
-<ul>
-
-<li>Ministério das Mulheres – https://www.gov.br/mulheres</li>
-
-<li>Governo Federal – https://www.gov.br</li>
-
-<li>Conselho Nacional de Justiça – https://www.cnj.jus.br</li>
-
-<li>Lei Maria da Penha – https://www.planalto.gov.br</li>
-
-<li>Ministério dos Direitos Humanos e da Cidadania – https://www.gov.br/mdh</li>
-
-</ul>
-
+  <h2>Quiz Interativo</h2>
+  <div id="quiz"></div>
+  <button onclick="corrigirQuiz()">Ver Resultado</button>
+  <p id="resultado"></p>
 </section>
 
-<script src="script.js"></script>
+<footer>
+  <h3>Fontes Utilizadas</h3>
+  <p>
+    - Ministério das Mulheres: Pacto Nacional de Prevenção aos Feminicídios<br>
+    - Governo Federal: Cartilhas sobre Igualdade e Violência contra Mulheres<br>
+    - Anatel: Protocolo de Enfrentamento à Violência Política contra as Mulheres
+  </p>
+</footer>
 
-</body>
-</html>
+<script>
+function mensagemAcolhimento() {
+  document.getElementById("resposta").innerHTML =
+    "Obrigado por compartilhar. Sua voz importa e você merece respeito!";
+}
+
+const perguntas = [
+  {q:"O que é machismo?", a:["Respeito às mulheres","Discriminação baseada no gênero","Igualdade de direitos"], c:1},
+  {q:"Qual órgão atende pelo número 180?", a:["Polícia Militar","Central de Atendimento à Mulher","SAMU"], c:1},
+  {q:"O que significa igualdade de gênero?", a:["Homens e mulheres com direitos iguais","Homens superiores às mulheres","Mulheres não participam da política"], c:0},
+  {q:"O feminicídio é:", a:["Crime contra homens","Assassinato de mulheres por razão de gênero","Discussão familiar"], c:1},
+  {q:"Quem procurar na escola em caso de violência?", a:["Professor ou pedagogo","Colegas","Ninguém"], c:0}
+];
+
+function carregarQuiz() {
+  let quizHTML = "";
+  perguntas
